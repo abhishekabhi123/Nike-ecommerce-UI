@@ -6,7 +6,7 @@ interface ProductCardProps {
   product: Product;
 }
 
-export const ProductCart = ({ product }: ProductCardProps) => {
+export const ProductCard = ({ product }: ProductCardProps) => {
   const displayPrice = product.discountPrice || product.price;
   const hasDiscount = !!product.discountPrice;
 
