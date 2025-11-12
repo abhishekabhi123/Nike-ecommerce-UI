@@ -7,7 +7,7 @@ interface ProductOptionsProps {
   selectedColor?: string;
 }
 
-export const ProductOptios = ({
+export const ProductOptions = ({
   sizes,
   colors,
   onSizeSelect,
