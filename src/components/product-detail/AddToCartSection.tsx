@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Button } from "../common";
 
-interface AddToCartSelectionProps {
+interface AddToCartSectionProps {
   price: number;
   discountedPrice?: number;
   onAddToCart: (quantity: number) => void;
 }
 
-export const AddToCartSelection = ({
+export const AddToCartSection = ({
   price,
   discountedPrice,
   onAddToCart,
-}: AddToCartSelectionProps) => {
+}: AddToCartSectionProps) => {
   const [quantity, setQuantity] = useState(1);
 
   const decrement = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
