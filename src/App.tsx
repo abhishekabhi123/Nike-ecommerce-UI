@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ProductDetail } from "./pages/ProductDetail";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Layout } from "./components/layout/Layout";
 import { Toast } from "./components/common";
@@ -21,6 +22,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<div>Home page</div>} />
+            <Route path="/products/:slug" element={<ProductDetail />} />
           </Routes>
         </Layout>
         <Toast />

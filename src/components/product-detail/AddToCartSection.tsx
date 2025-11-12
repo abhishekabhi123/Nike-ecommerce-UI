@@ -3,13 +3,13 @@ import { Button } from "../common";
 
 interface AddToCartSectionProps {
   price: number;
-  discountedPrice?: number;
+  discountPrice?: number;
   onAddToCart: (quantity: number) => void;
 }
 
 export const AddToCartSection = ({
   price,
-  discountedPrice,
+  discountPrice,
   onAddToCart,
 }: AddToCartSectionProps) => {
   const [quantity, setQuantity] = useState(1);
@@ -17,7 +17,7 @@ export const AddToCartSection = ({
   const decrement = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
   const increment = () => setQuantity((q) => q + 1);
 
-  const displayPrice = discountedPrice || price;
+  const displayPrice = discountPrice || price;
 
   return (
     <div className="space-y-4">
