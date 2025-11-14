@@ -32,7 +32,7 @@ export function useAddToCart() {
   });
 }
 
-export function useUpdateCartIem() {
+export function useUpdateCartItem() {
   const queryClient = useQueryClient();
   const showToast = useUiStore((state) => state.showToast);
 
